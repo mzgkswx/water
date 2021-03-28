@@ -2,8 +2,8 @@
   <div id="app">
     <router-view/>
     <div id="nav">
-      <router-link to="/water">大沢</router-link> |
-      <router-link to="/water/area2">水附</router-link>
+      <router-link to="/">大沢</router-link> |
+      <router-link to="/area2">水附</router-link>
     </div>
   </div>
 </template>
