@@ -6,12 +6,12 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/water/',
+    path: '/',
     name: 'Area1',
     component: Area1
   },
   {
-    path: '/water/area2',
+    path: '/area2',
     name: 'Area2',
     component: () => import('../views/Area2.vue')
   }
