@@ -1,24 +1,16 @@
 # water
+水量計算アプリ（PWA）
 
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 構成
+* Vue.js
+  * vue cli
+  * プロジェクト作成時に `Progressive Web App (PWA) Support` を選択
+    * register-service-worker
+    * @vue/cli-plugin-pwa
 
-### Compiles and minifies for production
-```
-npm run build
-```
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## メモ
+* GitHub Pagesで配信するため、Vueの出力ディレクトリを変更
+  * vue.config.js
+* src/manifest.js は、`npm run build` すると docs/ に作成される
