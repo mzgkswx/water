@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "precache-manifest.6d16669d9393c817179e796878d9ac34.js"
+  "/water/precache-manifest.8739e1c923b54039fb4d8723fa28c179.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "water"});
