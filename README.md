@@ -11,6 +11,7 @@
 
 
 ## メモ
-* GitHub Pagesで配信するため、Vueの出力ディレクトリを変更
-  * vue.config.js
+* vue.config.js
+  * outputDir: GitHub Pagesで配信するため、Vueの出力ディレクトリを変更
+  * publicPath: GitHub Pagesで .io/リポジトリ名 のサブディレクトリ形式で配信するためリポジトリ名を設定
 * src/manifest.js は、`npm run build` すると docs/ に作成される
