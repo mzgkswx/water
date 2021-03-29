@@ -78,12 +78,12 @@ export default {
       let sum = 0;
       for (const list of this.lists) {
         // 系統ごとの水量計に反映
-        list.amount = Number(list.seedling * list.water);
-        sum += list.amount;
+        list.amount = Number(list.seedling * list.water).toFixed(1);
+        sum += Number(list.amount);
       }
       // 保存
       this.save_values();
-      return sum;
+      return sum.toFixed(1);
     },
     // 画面データの保存
     save_values: function() {
