@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div>
       <h1>大沢</h1>
     </div>
@@ -7,15 +7,18 @@
       <table>
         <thead>
           <tr>
-            <th>系統</th><th>苗数</th><th>水量／苗</th><th>水量／系統</th>
+            <th class="th-line">系統</th>
+            <th class="th-seedling">苗数</th>
+            <th class="th-water">水量／苗</th>
+            <th class="th-amount">水量／系統</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="(list, i) in lists" v-cloak :key="i">
-            <td>{{i + 1}}.</td>
-            <td><input type="text" inputmode="numeric" v-model="list.seedling"></td>
-            <td><input type="text" inputmode="numeric" v-model="list.water"></td>
-            <td>{{list.amount}}</td>
+            <td class="td-line">{{i + 1}}.</td>
+            <td><input type="text" class="input-base" inputmode="numeric" v-model="list.seedling"></td>
+            <td><input type="text" class="input-base" inputmode="numeric" v-model="list.water"></td>
+            <td class="td-amount">{{list.amount}}</td>
           </tr>
         </tbody>
       </table>
@@ -31,7 +34,8 @@
       </table>
     </div>
     <div class="bulk-water">
-      <input type="text" inputmode="numeric" v-model="batch_water"><p>Lを全系統の水量に反映する</p>
+      <p>一括で水量を設定</p>
+      <input type="text" class="input-base" inputmode="numeric" v-model="batch_water">
     </div>
   </div>
 </template>
@@ -74,12 +78,12 @@ export default {
       let sum = 0;
       for (const list of this.lists) {
         // 系統ごとの水量計に反映
-        list.amount = Number(list.seedling * list.water);
-        sum += list.amount;
+        list.amount = Number(list.seedling * list.water).toFixed(1);
+        sum += Number(list.amount);
       }
       // 保存
       this.save_values();
-      return sum;
+      return sum.toFixed(1);
     },
     // 画面データの保存
     save_values: function() {
