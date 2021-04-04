@@ -35,7 +35,7 @@
     </div>
     <div class="bulk-water">
       <p>一括で水量を設定</p>
-      <input type="text" class="input-base" inputmode="numeric" v-model="batch_water">
+      <input type="text" class="input-base" inputmode="decimal" v-model="batch_water">
     </div>
   </div>
 </template>
