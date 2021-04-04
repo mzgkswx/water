@@ -17,7 +17,7 @@
           <tr v-for="(list, i) in lists" v-cloak :key="i">
             <td class="td-line">{{i + 1}}.</td>
             <td><input type="text" class="input-base" inputmode="numeric" v-model="list.seedling"></td>
-            <td><input type="text" class="input-base" inputmode="numeric" v-model="list.water"></td>
+            <td><input type="text" class="input-base" inputmode="decimal" v-model="list.water"></td>
             <td class="td-amount">{{list.amount}}</td>
           </tr>
         </tbody>

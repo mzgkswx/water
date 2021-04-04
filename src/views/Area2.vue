@@ -17,7 +17,7 @@
           <tr v-for="(list, i) in lists" v-cloak :key="i">
             <td class="td-line">{{i + 1}}.</td>
             <td><input type="text" class="input-base" inputmode="numeric" v-model="list.seedling"></td>
-            <td><input type="text" class="input-base" inputmode="numeric" v-model="list.water"></td>
+            <td><input type="text" class="input-base" inputmode="decimal" v-model="list.water"></td>
             <td class="td-amount">{{list.amount}}</td>
           </tr>
         </tbody>
@@ -35,7 +35,7 @@
     </div>
     <div class="bulk-water">
       <p>一括で水量を設定</p>
-      <input type="text" class="input-base" inputmode="numeric" v-model="batch_water">
+      <input type="text" class="input-base" inputmode="decimal" v-model="batch_water">
     </div>
   </div>
 </template>
